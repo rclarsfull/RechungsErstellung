@@ -1,4 +1,4 @@
-package HauptPackage;
+//package HauptPackage;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -6,24 +6,28 @@ import java.util.Date;
 public class Rechnung {
     private Kunde kunde;
     private Date datum;
-    private static int rechnungsnummer=10000;
+    private int rechnungsnummer;
+    private static int autowert=10000;
 
     private ArrayList<Position> posis;
 
     Rechnung(){
         datum=new Date();
-        this.rechnungsnummer+=1;
+        autowert+=1;
+        rechnungsnummer=autowert;
+        posis=new ArrayList<Position>();
     }
 
     Rechnung(Kunde k){
         posis=new ArrayList<Position>();
         datum=new Date();
         kunde=k;
-        this.rechnungsnummer+=1;
+        autowert+=1;
+        rechnungsnummer=autowert;
     }
 
     public String toString(){
-        String a="Herr Max Musstermann\nMusterstraße 1\nMusterhaußen 9999 \n\n\nRechnung\t\t\t\t\t\t\t\t\t\t\t\tDatum: "+datum.toString()+"\n\n";
+        String a="\n\n\nHerr Max Musstermann\nMusterstraße 1\nMusterhaußen 9999 \n\n\nRechnung\t\t\t\t\t\tDatum: "+datum.toString()+"\n\n";
         a+= kunde.toString(rechnungsnummer);
         for (Position x:
              posis) {
@@ -31,7 +35,7 @@ public class Rechnung {
         }
         a+="----------------------------------------------------------------------------------------\n";
 
-        a+="\n\t\t\t\t\t\t\tMWTS:\t"+gesamtMWST()+"Euro\n\t\t\t\t\t\t\tGesamt:\t"+gesamtPreis()+"Euro\n\n";
+        a+="\n\t\t\t\t\t\t\tNETTO:\t"+this.nettoPreis()+"\tEuro\n\t\t\t\t\t\t\tMWTS:\t"+this.gesamtMWST()+"\tEuro\n\t\t\t\t\t\t\tGesamt:\t"+this.gesamtPreis()+"\tEuro\n\n";
 
 
         return a;
@@ -42,7 +46,7 @@ public class Rechnung {
         int a=0;
         for (Position x:
              posis) {
-            a+=x.getArtikel().getMwst()*x.getMaenge();
+            a+=x.getArtikel().getMwstberechnet()*x.getMaenge();
         }
         return a;
     }
@@ -54,6 +58,15 @@ public class Rechnung {
             a+=x.getArtikel().getPreis()*x.getMaenge();
         }
         a+=gesamtMWST();
+        return a;
+    }
+  
+  public int nettoPreis(){
+        int a=0;
+        for (Position x:
+                posis) {
+            a+=x.getArtikel().getPreis()*x.getMaenge();
+        }
         return a;
     }
 

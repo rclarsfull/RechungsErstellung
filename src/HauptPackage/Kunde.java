@@ -1,4 +1,4 @@
-package HauptPackage;
+//package HauptPackage;
 
 public class Kunde {
     private String vorname;
@@ -26,7 +26,7 @@ public class Kunde {
     }
 
     public String toString(int rechnungsnummer){
-        return anrede+" "+vorname+" "+nachname+"\t\t\t\t\t\t\t\t\tKunden Nummer: "+kNummer+"\n"+adresse+"\t\t\t\t\t\t\t\t\t\t\tRechnungs Nummer: "+rechnungsnummer+"\n"+plz+"\n\n\n\n";
+        return anrede+" "+vorname+" "+nachname+"\t\t\t\t\tKunden Nummer: "+kNummer+"\n"+adresse+"\t\t\t\t\t\tRechnungs Nummer: "+rechnungsnummer+"\n"+plz+"\n\n\n\n";
     }
 
 }

@@ -1,4 +1,4 @@
-package HauptPackage;
+//package HauptPackage;
 
 public class Artikel {
     private String beschreibung,name;

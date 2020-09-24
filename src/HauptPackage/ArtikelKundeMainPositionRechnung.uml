@@ -1,0 +1,74 @@
+﻿[Files]
+File0=C:\Users\Lar.Przyby\Documents\RechungsErstellung\src\HauptPackage\Artikel.java
+File1=C:\Users\Lar.Przyby\Documents\RechungsErstellung\src\HauptPackage\Kunde.java
+File2=C:\Users\Lar.Przyby\Documents\RechungsErstellung\src\HauptPackage\Main.java
+File3=C:\Users\Lar.Przyby\Documents\RechungsErstellung\src\HauptPackage\Position.java
+File4=C:\Users\Lar.Przyby\Documents\RechungsErstellung\src\HauptPackage\Rechnung.java
+
+[Box:  - Artikel]
+X=1142
+Y=14
+ShowParameter=4
+ShowIcons=2
+FontSize=11
+FontName=Segoe UI
+
+[Box:  - Kunde]
+X=40
+Y=94
+ShowParameter=4
+ShowIcons=2
+FontSize=11
+FontName=Segoe UI
+
+[Box:  - Main]
+X=71
+Y=442
+ShowParameter=4
+ShowIcons=2
+FontSize=11
+FontName=Segoe UI
+
+[Box:  - Position]
+X=1166
+Y=502
+ShowParameter=4
+ShowIcons=2
+FontSize=11
+FontName=Segoe UI
+
+[Box:  - Rechnung]
+X=753
+Y=57
+ShowParameter=4
+ShowIcons=0
+FontSize=11
+FontName=Segoe UI
+
+[Diagram]
+comments=0
+OffsetX=0
+OffsetY=0
+Visibility=0
+ShowParameter=4
+SortOrder=0
+ShowIcons=0
+ShowConnections=0
+Fontname=Segoe UI
+Fontsize=11
+ShowObjectDiagram=0
+
+[Connections]
+V0=Rechnung#Kunde#AssociationDirected###1#0#0#-1##-kunde#0#0
+V1=Position#Artikel#AssociationDirected####0#0#0###0#0
+V2=Rechnung#Position#Aggregation####0#0#0###0#0
+
+[Interactive]
+I0=
+
+[Window]
+Left=-8
+Top=-31
+Width=1848
+Height=867
+

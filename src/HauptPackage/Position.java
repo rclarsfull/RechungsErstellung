@@ -1,4 +1,4 @@
-package HauptPackage;
+//package HauptPackage;
 
 public class Position {
     private int maenge;
@@ -13,7 +13,7 @@ public class Position {
 
     public String toString(){
         return "----------------------------------------------------------------------------------------\n"+
-                posNummer+".      | "+artikel.getName()+"\t\t | "+artikel.getPreis()+"Euro\t\t"+artikel.getPreis()*maenge+"Euro\n";
+                posNummer+".      | "+maenge+"x\t"+artikel.getName()+"\t\t | "+artikel.getPreis()+"Euro\t\t|"+artikel.getPreis()*maenge+"Euro\n";
 
     }
 
