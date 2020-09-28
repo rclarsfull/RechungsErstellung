@@ -9,9 +9,9 @@ public class Main {
     Artikel art2=new Artikel("Stift ","---",1300,19,10);
     Artikel art3=new Artikel("Fleisch","---",100,7,5);
     
-    Rechnung rechung1=new Rechnung(kunde1);
-    rechung1.addPosi(new Position(1,art1,5));  //(posNR,Artikel,Stk.)
-    rechung1.addPosi(new Position(2,art2,100));
+    Rechnung rechung1=new Rechnung(kunde1,1,art1,5);
+    
+    rechung1.addPosi(new Position(2,art2,100));  //(posNR,Artikel,Stk.)
     rechung1.addPosi(new Position(3,art3,2));
 
 

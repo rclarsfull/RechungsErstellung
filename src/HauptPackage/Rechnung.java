@@ -18,8 +18,9 @@ public class Rechnung {
         posis=new ArrayList<Position>();
     }
 
-    Rechnung(Kunde k){
+    Rechnung(Kunde k,int posNummer,Artikel a,int maenge){
         posis=new ArrayList<Position>();
+        this.addPosi(new Position(posNummer,a,maenge));
         datum=new Date();
         kunde=k;
         autowert+=1;
